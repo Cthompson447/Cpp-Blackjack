@@ -3,18 +3,21 @@
 
 using namespace std;
 
+	
 
-	enum class Suit { Diamonds, Spades, Hearts, Clubs};
-	enum class Face { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, King, Queen, Ace };
-
-	Card::Card(Suit suit, Face face):suitOfCard(suit), faceOfCard(face);
-
-	string Card::getSuit() {
-		return suit;
+	Card::Card(Suit suit, Face face): faceOfCard(face), suitOfCard(suit)
+	{
+		
 	}
 
-	string Card::getFace() {
-		return face;
+	Card::Suit Card::getSuit() {
+		return Suit::Diamonds;
+	}
+
+
+
+	Card::Face Card::getFace() {
+		return Face::Eight;
 	}
 
 //points per card to differentiate between ace being 1 or 11*/
