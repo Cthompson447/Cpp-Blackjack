@@ -11,13 +11,18 @@ using namespace std;
 	}
 
 	Card::Suit Card::getSuit() {
-		return Suit::Diamonds;
+		return suitOfCard;
 	}
-
-
 
 	Card::Face Card::getFace() {
-		return Face::Eight;
+		return faceOfCard;
 	}
 
+	void Card::setSuit(Suit suit) {
+		
+	}
+
+	void Card::setFace(Face face) {
+
+	}
 //points per card to differentiate between ace being 1 or 11*/

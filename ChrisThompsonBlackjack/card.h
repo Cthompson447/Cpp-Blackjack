@@ -10,9 +10,10 @@ class Card {
 
 public:
 	Card(Suit, Face);
+	void setFace(Face face);
 	Face getFace();
+	void setSuit(Suit suit);
 	Suit getSuit();
-	
 
 private:
 	Face faceOfCard;
