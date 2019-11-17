@@ -3,8 +3,6 @@
 
 using namespace std;
 
-	
-
 	Card::Card(Suit suit, Face face): faceOfCard(face), suitOfCard(suit)
 	{
 		
