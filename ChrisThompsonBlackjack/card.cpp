@@ -23,4 +23,4 @@ using namespace std;
 	void Card::setFace(Face face) {
 
 	}
-//points per card to differentiate between ace being 1 or 11*/
+//points per card to differentiate between ace being 1 or 11, ace is assumed as high unless player goes bust eg ace makes player with 15 goes bust therefore is 1  */

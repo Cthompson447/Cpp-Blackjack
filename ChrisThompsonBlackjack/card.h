@@ -1,7 +1,6 @@
 #pragma once
 #include <string>
 #include <iostream>
-#include "card.cpp"
 class Card {
 
 	enum class Suit { Diamonds, Spades, Hearts, Clubs };
