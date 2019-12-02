@@ -17,7 +17,6 @@ public:
 private:
 	
 	std::vector<Card> deck;
-
-	int deckPosition;
+	int deckPosition = -1;
 
 };

@@ -38,9 +38,8 @@ void Deck::shuffleDeck()
 
 Card Deck::dealCard()
 {
-	int cardToDeal = deck.size();
-	deck.pop_back();
-	return deck.at(cardToDeal);
+	deckPosition++;
+	return deck.at(deckPosition);
 
 }
 
