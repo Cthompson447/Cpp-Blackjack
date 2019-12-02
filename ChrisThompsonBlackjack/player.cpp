@@ -2,6 +2,7 @@
 
 Player::Player()
 {
+
 }
 
 Player::~Player()
@@ -20,33 +21,38 @@ void Player::hitOrStick()
 
 void Player::determineAceValue()
 {
+
 }
 
-void Player::setBalance(double)
+void Player::setBalance(double newBalance)
 {
+	balance = newBalance;
 }
 
 double Player::getBalance()
 {
-	return 0.0;
+	return balance;
 }
 
-void Player::setBet(double)
+void Player::setBet(double newBet)
 {
+	bet = newBet;
 }
 
 double Player::getBet()
 {
-	return 0.0;
+	return bet;
 }
 
-void Player::setScore(int)
+void Player::setScore(int newScore)
 {
+	score = newScore;
+
 }
 
 int Player::getScore()
 {
-	return 0;
+	return score;
 }
 
 void Player::setName(std::string)
@@ -55,5 +61,5 @@ void Player::setName(std::string)
 
 std::string Player::getName()
 {
-	return std::string();
+	return name;
 }
