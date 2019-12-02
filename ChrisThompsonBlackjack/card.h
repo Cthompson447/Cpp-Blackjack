@@ -1,20 +1,25 @@
 #pragma once
 #include <string>
 #include <iostream>
-class Card {
+#include <array>
 
-	enum class Suit { Diamonds, Spades, Hearts, Clubs };
-	enum class Face { Two, Three, Four, Five, Six, Seven, Eight, Nine, Ten, Jack, King, Queen, Ace };
+class Card {
 
 
 public:
-	Card(Suit, Face);
-	void setFace(Face);
-	Face getFace();
-	void setSuit(Suit);
-	Suit getSuit();
+	Card(int =0, int =0);
+	~Card();
+	void setFace( int );
+	int getFace();
+	void setSuit( int );
+	int getSuit();
+
+	std::string printCardValue();
+
+	static const std::array<std::string, 13> faces;
+	static const std::array<std::string, 4> suits;
 
 private:
-	Face faceOfCard;
-	Suit suitOfCard;
+	int face;
+	int suit;
 };

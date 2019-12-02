@@ -9,11 +9,15 @@ class Deck {
 
 public:
 	Deck();
-	void populateDeck();
+	~Deck();
 	void shuffleDeck();
 	Card dealCard();
+	void displayDeck();
 	
 private:
-	vector<string> deck;
+	
+	std::vector<Card> deck;
+
+	int deckPosition;
 
 };
