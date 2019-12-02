@@ -2,6 +2,7 @@
 #include <iostream>
 #include "card.h"
 #include "deck.h"
+#include "dealer.h"
 
 using namespace std;
 void displayMenu();

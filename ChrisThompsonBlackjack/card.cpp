@@ -14,6 +14,10 @@ const array<string, 13> Card::faces{ "Two", "Three", "Four", "Five", "Six", "Sev
 		suit = suits;
 	}
 
+	Card::~Card()
+	{
+	}
+
 	int Card::getSuit() {
 		return suit;
 	}
