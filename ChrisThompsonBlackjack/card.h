@@ -14,6 +14,8 @@ public:
 	void setSuit( int );
 	int getSuit();
 
+	int getCardScore();
+
 	std::string printCardValue();
 
 	static const std::array<std::string, 13> faces;

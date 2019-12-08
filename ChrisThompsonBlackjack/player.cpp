@@ -1,6 +1,10 @@
 #include "player.h"
 
-Player::Player()
+Player::Player() {
+
+}
+
+Player::Player(std::string playerName): name(playerName)
 {
 
 }
@@ -10,13 +14,11 @@ Player::~Player()
 }
 
 bool Player::isBust()
-{
-	
+{	
+	if (*score > 21) {
+		return true;
+	}
 	return false;
-}
-
-void Player::hitOrStick()
-{
 }
 
 void Player::determineAceValue()
@@ -36,27 +38,33 @@ double Player::getBalance()
 
 void Player::setBet(double newBet)
 {
-	bet = newBet;
+	*bet = newBet;
 }
 
 double Player::getBet()
 {
-	return bet;
+	return *bet;
 }
 
 void Player::setScore(int newScore)
 {
-	score = newScore;
+	*score = newScore;
 
 }
 
 int Player::getScore()
 {
-	return score;
+	
+	for (int i=0; i < hand.size(); i++)
+	{
+		*score = *score + hand[i].getCardScore();
+	}
+	return *score;
 }
 
-void Player::setName(std::string)
+void Player::setName(std::string newName)
 {
+	name = newName;
 }
 
 std::string Player::getName()

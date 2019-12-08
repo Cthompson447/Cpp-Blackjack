@@ -8,9 +8,9 @@ class Player {
 
 public:
 	Player();
+	Player(std::string playerName);
 	~Player();
 	bool isBust();
-	void hitOrStick();
 	void determineAceValue();
 
 	void setBalance( double );
@@ -22,11 +22,12 @@ public:
 	void setName(std::string);
 	std::string getName();
 
-private:
 	std::vector<Card> hand;
+
+private:
 	std::string name;
 	double balance;
-	double bet;
-	int score;
+	double *bet;
+	int *score;
 
 };
