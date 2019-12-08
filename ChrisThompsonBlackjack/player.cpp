@@ -15,7 +15,7 @@ Player::~Player()
 
 bool Player::isBust()
 {	
-	if (*score > 21) {
+	if (this->getScore() > 21) {
 		return true;
 	}
 	return false;
@@ -48,7 +48,7 @@ double Player::getBet()
 
 void Player::setScore(int newScore)
 {
-	*score = newScore;
+	score = newScore;
 
 }
 
@@ -57,9 +57,15 @@ int Player::getScore()
 	
 	for (int i=0; i < hand.size(); i++)
 	{
-		*score = *score + hand[i].getCardScore();
+		try {
+			score += hand[i].getCardScore();
+		}
+		catch (const std::exception e) {
+			std::cout << "An exception has occured, please contact administrator";
+		}
+		
 	}
-	return *score;
+	return score;
 }
 
 void Player::setName(std::string newName)

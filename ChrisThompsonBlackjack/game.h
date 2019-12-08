@@ -11,4 +11,6 @@ private:
 	Deck deck;
 	Dealer dealer;
 	Player player;
+
+	std::string newName;
 };

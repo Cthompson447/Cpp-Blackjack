@@ -26,34 +26,34 @@ const array<string, 13> Card::faces{ "Two", "Three", "Four", "Five", "Six", "Sev
 	{
 		int cardScore = 0;
 
-		if (this->getFace == "Two") {
+		if (this->getFace() == 0) {
 			cardScore = 2;
 		}
-		else if (this->getFace == "Three") {
+		else if (this->getFace() == 1) {
 			cardScore = 3;
 		}
-		else if (this->getFace == "Four") {
+		else if (this->getFace() == 2) {
 			cardScore = 4;
 		}
-		else if (this->getFace == "Five") {
+		else if (this->getFace() == 3) {
 			cardScore = 5;
 		}
-		else if (this->getFace == "Six") {
+		else if (this->getFace() == 4) {
 			cardScore = 6;
 		}
-		else if (this->getFace == "Seven") {
+		else if (this->getFace() == 5) {
 			cardScore = 7;
 		}
-		else if (this->getFace == "Eight") {
+		else if (this->getFace() == 6) {
 			cardScore = 8;
 		}
-		else if (this->getFace == "Nine") {
+		else if (this->getFace() == 7) {
 			cardScore = 9;
 		}
-		else if (this->getFace == "Ten" || this->getFace == "Jack" || this->getFace == "King" || this->getFace == "Queen") {
+		else if (this->getFace() == 8 || this->getFace() == 9 || this->getFace() == 10 || this->getFace() == 11) {
 			cardScore = 10;
 		}
-		else if (this->getFace == "Ace") {
+		else if (this->getFace() == 12) {
 			//Giving player the choice to have their ace worth 1 or 11 points
 			int choice;
 			cout << "Would you like your ace to be worth 1 or 11 points, please enter the value you would like \n";

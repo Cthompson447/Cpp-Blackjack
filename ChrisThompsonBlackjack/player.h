@@ -28,6 +28,6 @@ private:
 	std::string name;
 	double balance;
 	double *bet;
-	int *score;
+	int score;
 
 };
