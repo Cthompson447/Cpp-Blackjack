@@ -38,6 +38,7 @@ void Deck::shuffleDeck()
 
 Card Deck::dealCard()
 {
+	shuffleDeck();
 	deckPosition++;
 	return deck.at(deckPosition);
 

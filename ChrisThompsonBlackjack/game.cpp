@@ -16,8 +16,6 @@ void game::playGame()
 	Dealer dealer;
 	Deck deck;
 
-	deck.shuffleDeck();
-
 	//Get player's name and write to newPlayer name value
 	cout << "Please enter name of player: ";
 	try {
@@ -28,6 +26,7 @@ void game::playGame()
 		cout << "Please enter a name of corret format";
 	}
 	
+	deck.shuffleDeck();
 
 	//Deal 2 cards to both the dealer and the player
 	newPlayer.hand.push_back(dealer.dealCard());
