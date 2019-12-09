@@ -15,7 +15,7 @@ Player::~Player()
 
 bool Player::isBust()
 {	
-	if (this->getScore() > 21) {
+	if (getScore() > 21) {
 		return true;
 	}
 	return false;
@@ -54,6 +54,7 @@ void Player::setScore(int newScore)
 
 int Player::getScore()
 {
+	score = 0;
 	
 	for (int i=0; i < hand.size(); i++)
 	{
@@ -61,7 +62,7 @@ int Player::getScore()
 			score += hand[i].getCardScore();
 		}
 		catch (const std::exception e) {
-			std::cout << "An exception has occured, please contact administrator";
+			std::cout << "unable to get score";
 		}
 		
 	}
@@ -76,4 +77,9 @@ void Player::setName(std::string newName)
 std::string Player::getName()
 {
 	return name;
+}
+
+std::vector<Card> Player::getHand()
+{
+	return hand;
 }

@@ -55,14 +55,14 @@ const array<string, 13> Card::faces{ "Two", "Three", "Four", "Five", "Six", "Sev
 		}
 		else if (this->getFace() == 12) {
 			//Giving player the choice to have their ace worth 1 or 11 points
-			int choice;
+			int aceVal;
 			cout << "Would you like your ace to be worth 1 or 11 points, please enter the value you would like \n";
-			cin >> choice;
+			cin >> aceVal;
 
-			if (choice != 1 || choice != 11) {
+			if (aceVal != 1 || aceVal != 11) {
 				cout << "Please enter a correct value";
 			} else {
-				switch (choice) {
+				switch (aceVal) {
 				case 1:
 					cardScore = 1;
 				case 11:

@@ -16,8 +16,6 @@ void game::playGame()
 	Dealer dealer;
 	Deck deck;
 
-	deck.shuffleDeck();
-
 	//Get player's name and write to newPlayer name value
 	cout << "Please enter name of player: ";
 	try {
@@ -28,6 +26,7 @@ void game::playGame()
 		cout << "Please enter a name of corret format";
 	}
 	
+	deck.shuffleDeck();
 
 	//Deal 2 cards to both the dealer and the player
 	newPlayer.hand.push_back(dealer.dealCard());
@@ -38,9 +37,33 @@ void game::playGame()
 
 	//Initial check for a blackjack
 	if (newPlayer.getScore() == 21) {
-		cout << player.getName() << "Wins!";
+		cout << newPlayer.getName() << "Wins!";
+		return;
 	}
-	else {
+
+	cout << "Your current hand is "; //<< newPlayer.getHand();
+
+	while (!newPlayer.isBust()) {
+		int choice;
+		cout << newPlayer.getName() << ", would you like to hit(1) or stick(2)?\n";
+		cin >> choice;
+		switch (choice) {
+		case 1:
+			newPlayer.hand.push_back(dealer.dealCard());
+		case 2:
+			if (!dealer.isBust()) {
+				if (dealer.getScore() < 17) {
+					dealer.hand.push_back(dealer.dealCard());
+				}
+				else {
+					cout << newPlayer.getName() << "Wins!";
+					break;
+				}
+			}
+			break;
+		}
+
 
 	}
+
 }

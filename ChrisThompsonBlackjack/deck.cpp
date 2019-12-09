@@ -32,12 +32,14 @@ void Deck::displayDeck() {
 
 void Deck::shuffleDeck()
 {
+	//Using current unix timestamp to generate random number, as we can never be at same time twice this should be truly random
 	srand(time(nullptr));
 	std::random_shuffle(deck.begin(), deck.end());
 }
 
 Card Deck::dealCard()
 {
+	shuffleDeck();
 	deckPosition++;
 	return deck.at(deckPosition);
 

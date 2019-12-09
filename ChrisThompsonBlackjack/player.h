@@ -20,10 +20,10 @@ public:
 	void setScore(int);
 	int getScore();
 	void setName(std::string);
+	
 	std::string getName();
-
 	std::vector<Card> hand;
-
+	std::vector<Card> getHand();
 private:
 	std::string name;
 	double balance;
